@@ -3,17 +3,16 @@ function showDateTime(){
     var h = date.getHours(); //This returns 0-23h
     var m = date.getMinutes(); //This returns 0-59
     var s = date.getSeconds();//This returns 0-59
-    // var session =  "a.m.";
-	var titel = "Mirëmengjesi"
+	var titel = "Mirëdita"
 
     var year = date.getFullYear();
 
     var month = date.getMonth();
-    var montharray = ["Januar", "Shkurt", "Mars", "Prill", "Mai", "Qershor", "Korrik", "Gusht", "Shtator", "Tetor", "Nentor", "Dhjetor"];
+    var montharray = ["janar", "shkurt", "mars", "prill", "maj", "qershor", "korrik", "gusht", "shtator", "tetor", "nëntor", "dhjetor"];
     month = montharray[month];
 
     var day = date.getDay();
-    var dayarray = ["Hëne", "Marte", "Merkur", "Ejte", "Premte"];
+    var dayarray = ["e hënë", "e marte", "e mërkurë", "e enjte", "e premte"];
     day = dayarray[day - 1];
 
     var date = date.getDate();
@@ -21,13 +20,11 @@ function showDateTime(){
     if(h == 0){
         h = 12;
     }
-    if(h > 12){
-        // session = "p.m.";
+    if(h > 17){
 		titel = "Mirëmbrama";
-        // h = h - 12;
     }
 	if(h < 10 ) {
-		titel = "Mirdita";
+        titel = "Mirëmengjesi"
 	}
 
     h = (h < 10) ? "0" + h : h;
@@ -42,14 +39,6 @@ function showDateTime(){
     document.getElementById("DateDisplay").textContent = date;
 	document.getElementById("titel").innerText = titel;
     document.getElementById("titel").textContent = titel;
-    
-    // document.getElementById("ClockDisplay").innerText = date;
-    // document.getElementById("ClockDisplay").textContent = date;
-    // document.getElementById("DateDisplay").innerText= title;
-    // document.getElementById("DateDisplay").textContent = title;
-	// document.getElementById("titel").innerText = time;
-	// document.getElementById("titel").textContent = time;
-	
 
     setTimeout(showDateTime, 100);
 }

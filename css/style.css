@@ -1,6 +1,5 @@
 body {
     background-color: #000000;
-    background-size: cover;
 }
 #DateTime{
     display: flex;
@@ -8,8 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
-
+    min-height: 98vh;
 }
 #ClockDisplay{
     color: #ffffff;
