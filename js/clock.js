@@ -3,28 +3,27 @@ function showDateTime(){
     var h = date.getHours(); //This returns 0-23h
     var m = date.getMinutes(); //This returns 0-59
     var s = date.getSeconds();//This returns 0-59
-	var titel = "Mirëdita"
+	var titel = "Mirdita"
 
     var year = date.getFullYear();
 
     var month = date.getMonth();
     var montharray = ["janar", "shkurt", "mars", "prill", "maj", "qershor", "korrik", "gusht", "shtator", "tetor", "nëntor", "dhjetor"];
     month = montharray[month];
+    
 
     var day = date.getDay();
-    var dayarray = ["e hënë", "e marte", "e mërkurë", "e enjte", "e premte"];
+    var dayarray = ["e hënë", "e marte", "e mërkurë", "e enjte", "e premte", "e shtunë", "e diel"];
     day = dayarray[day - 1];
+    console.log(date.getDay())
 
     var date = date.getDate();
 
-    if(h == 0){
-        h = 12;
-    }
-    if(h > 17){
-		titel = "Mirëmbrama";
+    if(h >= 17){
+		titel = "Mirmbrema";
     }
 	if(h < 10 ) {
-        titel = "Mirëmengjesi"
+        titel = "Mirmengjes"
 	}
 
     h = (h < 10) ? "0" + h : h;
