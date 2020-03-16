@@ -18,8 +18,6 @@ function showDateTime(){
     console.log(date.getDay())
 
     var date = date.getDate();
-	h=23
-	m= 30
 	if(h >= 5 ) {
         titel = "Mirëdita"
 	}
