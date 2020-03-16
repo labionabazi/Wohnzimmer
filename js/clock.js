@@ -3,7 +3,7 @@ function showDateTime(){
     var h = date.getHours(); //This returns 0-23h
     var m = date.getMinutes(); //This returns 0-59
     var s = date.getSeconds();//This returns 0-59
-	var titel = "Mirdita"
+	var titel = ""
 
     var year = date.getFullYear();
 
@@ -13,17 +13,24 @@ function showDateTime(){
     
 
     var day = date.getDay();
-    var dayarray = ["e hënë", "e marte", "e mërkurë", "e enjte", "e premte", "e shtunë", "e diel"];
+    var dayarray = ["e diel", "e hënë", "e marte", "e mërkurë", "e enjte", "e premte", "e shtunë", "e diel"];
     day = dayarray[day - 1];
     console.log(date.getDay())
 
     var date = date.getDate();
-
+	h=23
+	m= 30
+	if(h >= 5 ) {
+        titel = "Mirëdita"
+	}
+	if(h >= 10 ) {
+        titel = "Mirëmëngjes"
+	}
     if(h >= 17){
-		titel = "Mirmbrema";
+		titel = "Mirëmbrema";
     }
-	if(h < 10 ) {
-        titel = "Mirmengjes"
+	if(h >= 23 && m >= 30) {
+		titel = "Naten e mirë"
 	}
 
     h = (h < 10) ? "0" + h : h;
