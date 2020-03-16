@@ -14,8 +14,7 @@ function showDateTime(){
 
     var day = date.getDay();
     var dayarray = ["e diel", "e hënë", "e marte", "e mërkurë", "e enjte", "e premte", "e shtunë", "e diel"];
-    day = dayarray[day - 1];
-    console.log(date.getDay())
+    day = dayarray[day];
 
     var date = date.getDate();
 	if(h >= 5 ) {
@@ -25,7 +24,7 @@ function showDateTime(){
         titel = "Mirëmëngjes"
 	}
     if(h >= 17){
-		titel = "Mirëmbrema";
+		titel = "Mirëmbrëma";
     }
 	if(h >= 23 && m >= 30) {
 		titel = "Naten e mirë"
