@@ -18,10 +18,10 @@ function showDateTime(){
 
     var date = date.getDate();
 	if(h >= 5 ) {
-        titel = "Mirëdita"
+        titel = "Mirëmëngjes"
 	}
 	if(h >= 10 ) {
-        titel = "Mirëmëngjes"
+        titel = "Mirëdita"
 	}
     if(h >= 17){
 		titel = "Mirëmbrëma";
